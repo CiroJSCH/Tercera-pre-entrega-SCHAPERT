@@ -1,0 +1,36 @@
+<section class="col-span-12 md:col-span-6 xl:col-span-8 border-2 border-rose-600">
+  <h2 class="text-center text-xl md:text-2xl lg:text-3xl text-rose-800 bg-rose-100 py-2 font-semibold border-b-2 border-b-rose-600">Filtrar</h2>
+  <section class="p-2 flex flex-col xl:flex-row xl:justify-around gap-3">
+    <div>
+      <form action="" class="flex flex-col gap-2">
+        <div class="flex flex-col gap-2">
+          <label for="topics" class="text-lg font-medium uppercase">Buscar por tema</label>
+          <select name="topics" id="topics" class="outline-none p-2 border-2 border-rose-600">
+            <option value="all">Todos</option>
+            {% for topic in topics %}
+              <option value="{{ topic.id }}">{{ topic.name }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="flex flex-col gap-2">
+          <label for="courses" class="text-lg font-medium uppercase">Buscar por curso</label>
+          <select name="courses" id="courses" class="outline-none p-2 border-2 border-rose-600">
+            <option value="all">Todos</option>
+            {% for course in courses %}
+              <option value="{{ course.id }}">{{ course.name }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <button type="submit" class="mt-2 uppercase border-2 border-rose-600 text-rose-600 hover:text-white hover:bg-rose-600 transition-colors px-4 py-2 w-[150px] font-bold cursor-pointer">Filtrar</button>
+      </form>
+    </div>
+    <div>
+      <h3 class="text-xl font-semibold text-rose-800 mt-3">Resultados</h3>     
+      <ul class="mt-1">
+        {% for student in students %}
+          <li class="text-[15px] font-medium">{{ student.name }} {{ student.surname }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+</section>

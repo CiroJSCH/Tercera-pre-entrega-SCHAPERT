@@ -1,3 +1,17 @@
 <section class="col-span-12 md:col-span-6 xl:col-span-4 border-2 border-orange-600">
   <h2 class="text-center text-xl md:text-2xl lg:text-3xl text-orange-500 bg-orange-100 py-2 font-semibold border-b-2 border-b-orange-600">Temas</h2>
+  <div class="w-full flex items-center px-2 py-3">
+    <form method="post" action="{% url 'index' %}?form=topic" class="flex flex-col gap-3 w-full mx-auto max-w-[500px]">
+      {% csrf_token %}
+      {% for field in topic_form %}
+      <div class="flex flex-col">
+        <label for={{ field.name }} class="uppercase font-medium text-lg">
+          {{ field.label_tag }}
+        </label> 
+        {{ field  }}
+      </div>
+      {% endfor %}
+      <button type="submit" class="uppercase border-2 border-orange-600 text-orange-600 hover:text-white hover:bg-orange-600 transition-colors px-4 py-2 w-[150px] font-bold cursor-pointer">Crear</button>
+    </form>
+  </div>
 </section>
