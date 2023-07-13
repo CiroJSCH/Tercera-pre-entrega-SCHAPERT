@@ -5,10 +5,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Coderhouse Tercera Pre-Entrega</title>
   <link rel="stylesheet" href="{% static 'styles/output.css' %}">
+  <link rel="icon" href="{% static 'images/coder.png' %}">
 </head>
-<body>
-  <h1 class="text-red-500">Hola mundo</h1>
+<body class="max-w-[1440px] mx-auto w-screen h-screen min-h-screen bg-[#f2f1f1]">
+  {% block content %}
+  {% endblock content %}
 </body>
 </html>
