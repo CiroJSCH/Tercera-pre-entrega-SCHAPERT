@@ -24,7 +24,7 @@ class Course(models.Model):
     name = models.CharField(max_length=200)
     description = models.TextField(blank=True, null=True)
     category = models.ForeignKey(
-        Topic, on_delete=models.CASCADE, verbose_name='Categoría')
+        Topic, on_delete=models.CASCADE)
     students = models.ManyToManyField(Student, blank=True)
 
     def __str__(self):

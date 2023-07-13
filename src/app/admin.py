@@ -11,7 +11,7 @@ class CourseAdmin(admin.ModelAdmin):
     def students_count(self, obj):
         return obj.student_set.count()
 
-    students_count.short_description = 'Cantidad de estudiantes'
+    students_count.short_description = 'Students Count'
 
 
 class TopicAdmin(admin.ModelAdmin):
@@ -20,7 +20,7 @@ class TopicAdmin(admin.ModelAdmin):
     def courses_count(self, obj):
         return obj.course_set.count()
 
-    courses_count.short_description = 'Cantidad de cursos'
+    courses_count.short_description = 'Courses Count'
 
 
 admin.site.register(Course, CourseAdmin)
