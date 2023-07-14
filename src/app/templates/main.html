@@ -1,9 +1,9 @@
 {% extends 'layout.html' %}
 {% block content %}
 <main class="grid grid-cols-12 gap-4 w-full h-auto p-2">
+  {% include 'students_section.html' %}
   {% include 'topics_section.html' %}
   {% include 'courses_section.html' %}
-  {% include 'students_section.html' %}
   {% include 'filter_section.html' %}
   {% include 'search_section.html' %}
 </main>
