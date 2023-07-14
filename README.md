@@ -9,7 +9,7 @@ La idea es la siguiente:
 
 1. Crear estudiantes
 2. Crear temas (serían las categorías de los cursos)
-3. Crear cursos
+3. Crear cursos y anotar estudiantes
 
 Luego hay otros dos formularios que permiten:
 - Obtener estudiantes según el curso
@@ -18,10 +18,19 @@ Luego hay otros dos formularios que permiten:
 El proyecto está hecho con Django y TailwindCSS.
 
 Instrucciones:
+Ir a la carpeta del proyecto y ejecutar lo siguiente
+
 ```
+virtualenv venv # o el creador de entornos virtuales que quieras
+cd venv
+cd scripts
+activate
+cd ../../
+pip install django # instalamos django en el entorno virtual
 cd src
+python manage.py migrate
 python manage.py runserver
 ```
 
-PD: Por cuestiones de tiempo, no llegué a implementar validaciones / mensajes de error. Lo ideal sería tambien diferentes funcionalidades para eliminar cursos, estudiantes, poder actualzarlos, etc. 
+PD: No llegué a implementar validaciones / mensajes de error. Lo ideal sería tambien diferentes funcionalidades para eliminar cursos, estudiantes, poder actualzarlos, etc. 
 Pero me enfoqué en solo cumplir la consigna por falta de tiempo 😪
