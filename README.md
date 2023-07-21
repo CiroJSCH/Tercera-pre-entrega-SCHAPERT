@@ -31,6 +31,3 @@ cd src
 python manage.py migrate
 python manage.py runserver
 ```
-
-PD: No llegué a implementar validaciones / mensajes de error. Lo ideal sería tambien diferentes funcionalidades para eliminar cursos, estudiantes, poder actualzarlos, etc. 
-Pero me enfoqué en solo cumplir la consigna por falta de tiempo 😪
